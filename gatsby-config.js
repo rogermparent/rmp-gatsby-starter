@@ -1,10 +1,7 @@
+const siteMetadataFile = require('./site-metadata.json');
+
 module.exports = {
-  siteMetadata: {
-    title: `gatsby-example-using-remark`,
-    author: `@gatsbyjs`,
-    description: `Blazing-fast React.js static site generator`,
-    homepage: `https://www.gatsbyjs.org`,
-  },
+  siteMetadata: siteMetadataFile,
   mapping: {
     "MarkdownRemark.frontmatter.author": `AuthorYaml`,
   },
