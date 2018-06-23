@@ -26,7 +26,7 @@ class Layout extends React.Component {
           const { author, homepage } = data.site.siteMetadata
           return (
             <>
-              <div {...styles.container} {...styles.verticalPadding}>
+              <header {...styles.container} {...styles.verticalPadding}>
                 <Link
                   to="/"
                   css={{
@@ -46,21 +46,21 @@ class Layout extends React.Component {
                     gatsby-example-using-remark
                   </h1>
                 </Link>
-              </div>
-              <div {...styles.container} {...styles.verticalPadding}>
+              </header>
+              <main {...styles.container} {...styles.verticalPadding}>
                 {this.props.children}
-                <div
-                  css={{
+              </main>
+              <footer
+                css={{
                     ...scale(-0.5),
                     color: styles.colors.light,
-                  }}
+                }}
                 >
-                  powered by{` `}
-                  <a target="_blank" rel="noopener noreferrer" href={homepage}>
-                    {author}
-                  </a>
-                </div>
-              </div>
+                powered by{` `}
+                <a target="_blank" rel="noopener noreferrer" href={homepage}>
+                  {author}
+                </a>
+              </footer>
             </>
           )
         }}
