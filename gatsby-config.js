@@ -1,58 +1,65 @@
 const siteMetadataFile = require('./site-metadata.json');
 
 module.exports = {
-  siteMetadata: siteMetadataFile,
-  mapping: {
-    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
-  },
-  plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: `pages`,
-      },
+    siteMetadata: siteMetadataFile,
+    mapping: {
+        "MarkdownRemark.frontmatter.author": `AuthorYaml`,
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography.js`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        excerpt_separator: `<!-- end -->`,
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
+    plugins: [
+        {
+            resolve: `gatsby-source-filesystem`,
             options: {
-              maxWidth: 740,
+                path: `${__dirname}/src/pages`,
+                name: `pages`,
             },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
+        },/* YAML data support. Will break until there's a data file.
+        {
+            resolve: `gatsby-source-filesystem`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+                path: `${__dirname}/src/data`,
+                name: `data`,
             },
-          },
-          `gatsby-remark-copy-linked-files`,
-          {
-            resolve: `gatsby-remark-smartypants`,
+        },*/
+        {
+            resolve: `gatsby-plugin-typography`,
             options: {
-              dashes: `oldschool`,
+                pathToConfigModule: `src/utils/typography.js`,
             },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-katex`,
-        ],
-      },
-    },
-    `gatsby-transformer-yaml`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-catch-links`,
-    `gatsby-plugin-glamor`,
-  ],
+        },
+        `gatsby-transformer-sharp`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                excerpt_separator: `<!-- end -->`,
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 740,
+                        },
+                    },
+                    {
+                        resolve: `gatsby-remark-responsive-iframe`,
+                        options: {
+                            wrapperStyle: `margin-bottom: 1.0725rem`,
+                        },
+                    },
+                    `gatsby-remark-copy-linked-files`,
+                    {
+                        resolve: `gatsby-remark-smartypants`,
+                        options: {
+                            dashes: `oldschool`,
+                        },
+                    },
+                    `gatsby-remark-prismjs`,
+                    `gatsby-remark-autolink-headers`,
+                    `gatsby-remark-katex`,
+                ],
+            },
+        },
+        `gatsby-transformer-yaml`,
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-catch-links`,
+        `gatsby-plugin-glamor`,
+    ],
 }
