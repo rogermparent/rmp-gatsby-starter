@@ -1,11 +1,5 @@
-# Using remark
+# RMP Gatsby Starter
 
-https://using-remark.gatsbyjs.org
+This project is based on [the official Gatsby remark example][https://using-remark.gatsbyjs.org].
 
-Example site that demonstrates how to use [gatsby-transformer-remark][1] and its
-various plugins. It uses [Typography.js][2] and self-hosted fonts via the
-[Typefaces][3] project.
-
-[1]: https://www.gatsbyjs.org/packages/gatsby-transformer-remark/
-[2]: https://github.com/KyleAMathews/typography.js
-[3]: https://github.com/KyleAMathews/typefaces
+This project can be used as an example or a template. Its structure aims to ape more "classic" static site generators like Hugo or Hexo with the added power of Gatsby's defaults. It's also meant to be used with [Netlify CMS][https://github.com/netlify/netlify-cms], so the structure may awkwardly bend to fit its requirements (like the external siteMetadata file, for instance).

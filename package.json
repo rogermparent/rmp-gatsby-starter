@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-example-using-remark",
+  "name": "rmp-gatsby-starter",
   "private": true,
-  "description": "Gatsby example site that demonstrates gatsby-transformer-remark and its plugins.",
+  "description": "Gatsby v2 blog starter site that aims for a structure similar to other SSGs and compatibility with Netlify CMS.",
   "version": "1.0.0",
-  "author": "Florian Kissling <sechskilo@gmail.com>",
+  "author": "Roger Parent <rogermparent@gmail.com>",
   "dependencies": {
     "babel-plugin-lodash": "^3.2.11",
     "es6-object-assign": "^1.1.0",
